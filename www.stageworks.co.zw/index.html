@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Stageworks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>StageWorks <em></em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+
+              
+                
+               
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner header-text">
+      <div class="owl-banner owl-carousel">
+        <div class="banner-item-01">
+          <div class="text-content">
+            <center><a href="products.html" class="filled-button">Shop the Collection</a></center>
+            <h4></h4>
+            <h2></h2>
+          </div>
+        </div>
+        <div class="banner-item-02">
+          <div class="text-content">
+           
+            <h2>Pushing Culture Forward</h2>
+          </div>
+        </div>
+        <div class="banner-item-03">
+          <div class="text-content">
+            <h4></h4>
+            <h2>off.the.stage</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+    
+    <br>
+    <br>
+    <center>
+    <h1>Countdown For New Stock</h1>
+    <div id="countdown"></div>
+
+    <script>
+        // Set the countdown date and time
+        var countdownDate = new Date("February 25, 2024 12:00:00").getTime();
+
+        // Update the countdown every 1 second
+        var countdownTimer = setInterval(function() {
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the countdown date
+            var distance = countdownDate - now;
+
+            // Calculate the days, hours, minutes, and seconds remaining
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown in the "countdown" element
+            document.getElementById("countdown").innerHTML = days + "Days " + hours + "Hours "
+            + minutes + "Min " + seconds + "Sec ";
+
+            // If the countdown is finished, display a message
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+    </center>
+
+    </div>
+    <div class="latest-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>LATEST PRODUCTS </h2>
+              <a href="products.html">view more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="product-details.html" onclick="sendWhatsAppMessage('+263774924555', 'T-Shirt ')"><img src="images/sg1.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="product-details.html" onclick="sendWhatsAppMessage('+263774924555', 'T-Shirt ')"><h4>T-Shirt</h4></a>
+                <h6><small><del> </del></small> $20.00</h6>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="product-details.html" onclick="sendWhatsAppMessage('+263774924555', 'T-Shirt (Off.the.stage)')"><img src="images/st2.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="product-details.html" onclick="sendWhatsAppMessage('+263774924555', 'T-Shirt (Off.the.stage)')"><h4>T-Shirt (Off.the.stage)</h4></a>
+                <h6><small><del></del></small>  $20.00</h6>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="product-details.html" onclick="sendWhatsAppMessage('+263774924555', 'Stageworks Hood ')"><img src="images/sgh.jpg" alt=""></a>
+              <div class="down-content">
+                 <a href="product-details.html" onclick="sendWhatsAppMessage('+263774924555', 'Stageworks Hood')"><h4>Hood "Stageworks"</h4></a>
+                <h6><small><del></del></small>   $35.00</h6>
+                <p></p>
+              </div>
+            </div>
+          </div>
+
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div>  
+<center><a href="products.html" class="filled-button">View More Products</a></center>
+    <div class="best-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>About Us</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <p>Pushing Culture Forward </p>
+              
+              <a href="https://wa.me/c/263774924555" class="filled-button">Contact Us</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+       <center>
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5 pb-3">
+     
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+            <div class="d-flex align-items-center bg-light mb-4 justify-content-center" style="padding: 30px;">
+                <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+                <h5 class="font-weight-semi-bold m-0">Quality Products</h5>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+    <div class="d-flex align-items-center bg-light mb-4 justify-content-center" style="padding: 30px;">
+        <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+        
+        <h5 class="font-weight-semi-bold m-0">Chettah Delivery</h5>
+    </div>
+</div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+            <div class="d-flex align-items-center bg-light mb-4 justify-content-center" style="padding: 30px;">
+                <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+                <h5 class="font-weight-semi-bold m-0">Discounts!</h5>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</center>
+    <div class="happy-clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Happy Community</h2>
+
+             
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-clients owl-carousel text-center">
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>MAPASI</h4>
+                  <p class="n-m"><em>"High Quality"</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Makaveli</h4>
+                  <p class="n-m"><em>"Everything Staged"</em></p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <div class="icon">
+                  <i class="fa fa-user"></i>
+                </div>
+                <div class="down-content">
+                  <h4>Chibadura</h4>
+                  <p class="n-m"><em>"Pushing Culture Forward"</em></p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+   
+    
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+
+               <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://wa.me/c/263774924555"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="https://www.instagram.com/stage_works_zw?igsh=NTc4MTIwNjQ2YQ=="><i class="fa fa-instagram"></i></a></li>
+                
+              </ul>
+              <br>
+              <br>
+              <br>
+              <p>Copyright © 2024 STAGEWORKS - Designed by: <a href="https://www.facebook.com/profile.php?id=100091500360367">PanXe Solutions</a></p>
+
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+  </body>
+</html>

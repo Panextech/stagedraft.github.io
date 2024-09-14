@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   <link rel="icon" href="images/logo.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Product Details|Stageworks</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><h2>StageWorks <em></em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="product-details.html">Order
+                     
+                    </a>
+                </li> 
+
+                                <span class="sr-only">(current)</span>
+
+              
+                
+                <li class="nav-item"><a class="nav-link" href="products.html">Products </a></li>
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading about-heading header-text" style="background-image: url(assets/images/Stageworks.studios1.gif);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+             
+              <h2>Product Details</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-xs-12">
+            <div>
+              <img src="assets/images/st2.jpg" alt="" class="img-fluid wc-image">
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-4 col-xs-6">
+                <div>
+                  <img src="assets/images/st1.jpg" alt="" class="img-fluid">
+                </div>
+                <br>
+              </div>
+              <div class="col-sm-4 col-xs-6">
+                <div>
+                  <img src="assets/images/st3.jpg" alt="" class="img-fluid">
+                </div>
+                <br>
+              </div>
+              
+            </div>
+          </div>
+
+ <div class="container">
+    <div class="col-md-8 col-xs-12">
+        <form id="orderForm" action="#" method="post" class="form" onsubmit="return sendWhatsAppMessage(event)">
+            <h2>T-Shirt Order</h2>
+            <br>
+            <p class="lead">
+                <strong class="text-primary">$20.00</strong>
+            </p>
+            <br>
+            <p class="lead">High Quality T-Shirt</p>
+            <br>
+            
+            <div id="tshirtContainer">
+                <div class="tshirt-item">
+                    <div class="form-group">
+                        <label class="control-label">T-shirt Code</label>
+                        <input type="text" class="form-control" value="SW01" readonly>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label class="control-label">Size</label>
+                            <div class="form-group">
+                                <select class="form-control size">
+                                    <option value="">Select Size</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                    <option value="Extra Large">Extra Large</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <label class="control-label">Quantity</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control quantity" placeholder="1" min="1">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-danger btn-block" onclick="removeTshirt(this)">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="addTshirt()">Add Another T-Shirt</button>
+            <br><br>
+            
+            <div class="form-group">
+                <label for="paymentMethod">Select Payment Method</label>
+                <select class="form-control" id="paymentMethod" required>
+                    <option value="">Choose Payment Method</option>
+                    
+                    <option value="EcoCash">EcoCash</option>
+                    <option value="InnBucks">InnBucks</option>
+                    <option value="Mukuru">Mukuru</option>
+                    <option value="Mukuru">ZIG</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Order Now</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function addTshirt() {
+        const container = document.getElementById('tshirtContainer');
+        const newTshirt = document.createElement('div');
+        newTshirt.className = 'tshirt-item';
+        newTshirt.innerHTML = `
+            <div class="form-group">
+                <label class="control-label">T-shirt Code</label>
+                <input type="text" class="form-control" value="SW01" readonly>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label class="control-label">Size</label>
+                    <div class="form-group">
+                        <select class="form-control size">
+                            <option value="">Select Size</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                            <option value="Extra Large">Extra Large</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <label class="control-label">Quantity</label>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="number" class="form-control quantity" placeholder="1" min="1">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-danger btn-block" onclick="removeTshirt(this)">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.appendChild(newTshirt);
+    }
+
+    function removeTshirt(button) {
+        button.closest('.tshirt-item').remove();
+    }
+
+    function sendWhatsAppMessage(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const tshirts = document.querySelectorAll('.tshirt-item');
+        let message = 'Order Details:\n';
+        let validOrder = true;
+
+        for (const tshirt of tshirts) {
+            const size = tshirt.querySelector('.size').value;
+            const quantity = tshirt.querySelector('.quantity').value;
+            
+            // Validate size and quantity
+            if (!size || !quantity || quantity <= 0) {
+                validOrder = false;
+                break;
+            }
+
+            message += `\nT-shirt Code: SW01\nSize: ${size}\nQuantity: ${quantity}`;
+        }
+
+        if (!validOrder) {
+            alert('Please ensure all T-shirts have a selected size and a valid quantity.');
+            return;
+        }
+
+        const paymentMethod = document.getElementById('paymentMethod').value;
+        if (!paymentMethod) {
+            alert('Please select a payment method.');
+            return;
+        }
+
+        message += `\nPayment Method: ${paymentMethod}`;
+
+        const phoneNumber = '263774187893'; // Your WhatsApp number
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Create WhatsApp link
+        const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        
+        // Redirect to WhatsApp
+        window.open(whatsappLink, '_blank');
+    }
+</script>
+        </div>
+      </div>
+    </div>
+
+    <div class="latest-products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Similar Products</h2>
+              <a href="products.html">view more <i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="product-details.html"><img src="assets/images/sg2.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="product-details.html"><h4>T-Shirt</h4></a>
+                <h6><small><del></del></small> $20.00</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="product-details.html"><img src="assets/images/sg3.jpg" alt=""></a>
+              <div class="down-content">
+                <a href="product-details.html"><h4>T-Shirt</h4></a>
+                <h6><small><del></del></small> $20.00</h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="product-item">
+              <a href="product-details.html"><img src="assets/images/sgh.jpg" alt=""></a>
+              <div class="down-content">
+               <a href="product-details.html"><h4>Hood</h4></a>
+                <h6><small><del></del></small> $35.00</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+          
+        </div>
+      </div>
+    </div>
+
+     <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+
+               <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://wa.me/c/263774924555"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="https://www.instagram.com/stage_works_zw?igsh=NTc4MTIwNjQ2YQ=="><i class="fa fa-instagram"></i></a></li>
+                
+              </ul>
+              <br>
+              <br>
+              <br>
+              <p>Copyright © 2024 STAGEWORKS - Designed by: <a href="https://www.facebook.com/profile.php?id=100091500360367">PanXe Solutions</a></p>
+
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Book Now</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="contact-form">
+              <form action="#" id="contact">
+                  <div class="row">
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Pick-up location" required="">
+                          </fieldset>
+                       </div>
+
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Return location" required="">
+                          </fieldset>
+                       </div>
+                  </div>
+
+                  <div class="row">
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Pick-up date/time" required="">
+                          </fieldset>
+                       </div>
+
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Return date/time" required="">
+                          </fieldset>
+                       </div>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Enter full name" required="">
+
+                  <div class="row">
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Enter email address" required="">
+                          </fieldset>
+                       </div>
+
+                       <div class="col-md-6">
+                          <fieldset>
+                            <input type="text" class="form-control" placeholder="Enter phone" required="">
+                          </fieldset>
+                       </div>
+                  </div>
+              </form>
+           </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+  </body>
+
+</html>
